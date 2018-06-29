@@ -30,7 +30,7 @@ def scrap(file):
             title = None
 
         contents = targets.find_all('td',{'class','mv_sub'})
-        term = Dday = goods = time = place = None
+        term = time = place = None
         for target in contents:
             if target is not None:
                 target = parse_string(target.text).split(' : ')
@@ -41,21 +41,12 @@ def scrap(file):
                 if '응모기간' in index:
                     attr = attr.split(' ~ ')
                     term = attr[0] + '~' + attr[1]
-                elif '당첨자발표' in index:
-                    attr = attr.split()
-                    if attr[-1] == '이후':
-                        attr[-1] = '~'
-                    else:
-                        attr[-1] = ''
-                    Dday = attr[0][0:4] + '.' + attr[1][0:2] + '.' + attr[2][0:2] + attr[3]
-                elif '경품' in index:
-                    goods = attr
                 elif '시사회일시' in index:
                     time = attr
                 elif '시사회장소' in index:
                     place = attr
         if len(contents) is not 0:
-            file.writerow(["영화",title,term,Dday,time,place,goods,url])
+            file.writerow(["영화",title,term,time,place,url])
 
 
 if __name__ == "__main__":
