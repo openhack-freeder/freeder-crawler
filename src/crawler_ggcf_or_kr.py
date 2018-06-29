@@ -21,7 +21,7 @@ for i in range(1,7):
     for tag in bsObj.find_all('div',{'class','float_wrap'}):
         target = tag.find('div',{'class','text_line'})
         freeflag = '유료'
-        index = title = term = time = place = None
+        index = title = term = time = place = ''
         #Is show free?
         if target is not None:
             target = str(target)
@@ -59,7 +59,7 @@ for i in range(1,7):
                 atts = att.text.split()
                 if atts[0][0:2] == '기간':
                     if nowDate < atts[3]:
-                        term = att.text[5:]
+                        term = atts[1] +atts[2] + atts[3]
                     else:
                         term = 'timeout'
                 elif atts[0][0:2] == '시간':
@@ -69,8 +69,10 @@ for i in range(1,7):
                     place = region+att.text[5:]
 
             #show write to .csv, if it is not timeout
+            
             if term != 'timeout':
-                csv_output.writerow([index,title,term,time,place,urlmain])
+                csv_output.writerow([index,title ,term,time,place,urlmain])
+                
             
 
 output.close()
