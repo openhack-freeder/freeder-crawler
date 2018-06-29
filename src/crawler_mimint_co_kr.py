@@ -12,7 +12,7 @@ nowDate = now.strftime('%Y.%m.%d')
 def crawling_mimint(csv_file=None):
     if csv_file is None:
         return
-    csv_file.writerow(["catergory","title","date","time","where","url"])
+    csv_file.writerow(["category","title","date","time","where","url"])
     for i in range(1,3):
         urlObj = requests.get(urlfront + str(i) + urlback)
         bsObj = BeautifulSoup(urlObj.text,'html.parser')

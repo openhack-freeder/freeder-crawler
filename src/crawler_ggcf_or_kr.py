@@ -15,7 +15,7 @@ csv_output = csv.writer(output)
 result = ""
 region = '경기도'
 
-csv_output.writerow(["catergory","title","date","time","where","url"])
+csv_output.writerow(["category","title","date","time","where","url"])
 for i in range(1,7):
     urlObj = requests.get(urlfront + str(i) + urlback)
     bsObj = BeautifulSoup(urlObj.content,'html.parser')

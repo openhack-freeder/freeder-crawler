@@ -16,7 +16,7 @@ def parse_string(string):
         return string
 
 def scrap(file):
-    file.writerow(["catergory","title","date","time","where","url"])
+    file.writerow(["category","title","date","time","where","url"])
     url = "http://movie.yes24.com/Event/Event_List.aspx"
     html = get_html(url)
     soup = BeautifulSoup(html, 'html.parser')   
