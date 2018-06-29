@@ -1,5 +1,5 @@
 # freeder-crawler
-freeder의 크롤로 코드 저장소입니다.
+freeder의 크롤러 코드 저장소입니다.
 
 ## License
 
