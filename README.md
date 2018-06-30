@@ -1,6 +1,16 @@
 # freeder-crawler
 freeder의 크롤러 코드 저장소입니다.
 
+## Install
+```bash
+pip install --upgrade -r requirements.txt
+```
+
+## How to use?
+```
+git clone https://github.com/openhack-freeder/freeder-crawler.git crawler
+```
+
 ## License
 
 <img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">
