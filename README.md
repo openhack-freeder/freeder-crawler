@@ -2,7 +2,10 @@
   <img src="https://github.com/openhack-freeder/freeder-crawler/blob/master/img/logo.png" height="250px" >
 </div>
 
-# freeder-crawler
+<h1 align="center">freeder-crawler</h1>
+<p align="center">
+	<img src="https://img.shields.io/badge/OpenHack-3th-blue.svg">
+</p>
 
 ## Install
 ```bash
