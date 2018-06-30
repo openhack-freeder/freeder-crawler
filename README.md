@@ -1,5 +1,8 @@
+<div align="middle">
+  <img src="https://github.com/openhack-freeder/freeder-crawler/blob/master/img/logo.png" height="250px" >
+</div>
+
 # freeder-crawler
-freeder의 크롤러 코드 저장소입니다.
 
 ## Install
 ```bash
