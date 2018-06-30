@@ -16,10 +16,10 @@ def parse_string(string):
         return string
 
 def scrap(file):
+    file.writerow(["category","title","date","time","where","url"])
     url = "http://movie.yes24.com/Event/Event_List.aspx"
     html = get_html(url)
-    soup = BeautifulSoup(html, 'html.parser')
-   
+    soup = BeautifulSoup(html, 'html.parser')   
     contents_tags = soup.find_all('td',{'class','vtop'})
 
     for targets in contents_tags:
